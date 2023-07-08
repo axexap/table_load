@@ -30,3 +30,19 @@
 *.exe
 *.out
 *.app
+
+private void button1_Click(object sender, EventArgs e)
+{
+    DialogResult result = MessageBox.Show(
+        "Окрасить кнопку в красный цвет?", 
+        "Сообщение для тебя", 
+        MessageBoxButtons.YesNo, 
+        MessageBoxIcon.Information, 
+        MessageBoxDefaultButton.Button1, 
+        MessageBoxOptions.DefaultDesktopOnly);
+         
+    if (result == DialogResult.Yes)
+        button1.BackColor=Color.Green;
+     
+    this.TopMost = true;
+}
